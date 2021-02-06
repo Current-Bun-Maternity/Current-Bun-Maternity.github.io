@@ -10,39 +10,45 @@
     <meta name="author" content="Current Bun Maternity Ltd" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
     <style>
       /* variables */
 
       :root {
-        --font-step: 6px;
-        --font-size-xs: calc(var(--font-step) * 1);
-        --font-size-s: calc(var(--font-step) * 2);
-        --font-size-m: calc(var(--font-step) * 3);
-        --font-size-l: calc(var(--font-step) * 5);
-        --font-size-xl: calc(var(--font-step) * 7);
+        --font-step: 4px;
+        --font-size-xxs: calc(var(--font-step) * 2);
+        --font-size-xs: calc(var(--font-step) * 3);
+        --font-size-s: calc(var(--font-step) * 4);
+        --font-size-m: calc(var(--font-step) * 5);
+        --font-size-l: calc(var(--font-step) * 6);
+        --font-size-xl: calc(var(--font-step) * 8);
+        --font-size-xxl: calc(var(--font-step) * 10);
 
-        --space-step: 8px;
-        --space-xs: calc(var(--space-step) * 1);
-        --space-s: calc(var(--space-step) * 2);
-        --space-m: calc(var(--space-step) * 3);
-        --space-l: calc(var(--space-step) * 4);
-        --space-xl: calc(var(--space-step) * 5);
+        --space-step: 4px;
+        --space-xs: calc(var(--space-step) * 2);
+        --space-s: calc(var(--space-step) * 4);
+        --space-m: calc(var(--space-step) * 6);
+        --space-l: calc(var(--space-step) * 8);
+        --space-xl: calc(var(--space-step) * 10);
       }
 
       @media (min-width: 500px) and (max-width: 799px) {
         :root {
-          --font-step: 10px;
-          --space-step: 8px;
+          --font-step: 5px;
+          --space-step: 5px;
         }
       }
 
       @media (min-width: 800px) {
         :root {
-          --font-step: 10px;
-          --space-step: 12px;
+          --font-step: 6px;
+          --space-step: 6px;
         }
       }
 
@@ -58,84 +64,74 @@
         padding: 0;
         color: white;
         background: black;
-        /* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
-        font-family: 'Dosis', sans-serif;
+        font-display: fallback;
+        font-family: 'Dosis', Century Gothic, CenturyGothic, AppleGothic, sans-serif;
         font-size: var(--font-size-s);
-        letter-spacing: calc(var(--font-size-xs) / 3);
+        letter-spacing: calc(var(--font-size-xs) / 4);
         text-align: center;
-      }
 
-      h1 {
-        font-size: var(--font-size-xl);
-        font-weight: normal;
-        margin: 0;
-        padding: var(--space-xs);
-      }
-
-      h2 {
-        font-size: var(--font-size-m);
-        font-weight: normal;
-        margin-top: var(--space-xl);
-        margin-bottom: var(--space-xs);
-      }
-
-      h3 {
-        font-size: var(--font-size-s);
-        font-weight: normal;
+        background-image: linear-gradient(-155deg,#f29e4c,#a4036f,#048ba8);
       }
 
       a, a:active {
-        color: black;
+        color: white;
       }
 
 
       /* frames */
 
-      .outer-frame {
-        max-width: 800px;
-        margin: auto;
+      header {
+        background-color: black;
+        box-shadow: 0 0 12px black;
+        display: flex;
+        justify-content: space-around;
+        position: sticky;
       }
 
-      .inner-frame {
-        /* background: black; */
-        text-align: center;
-        /* padding: var(--space-xs) var(--space-s); */
-        padding: 0 var(--space-s);
-        /* max-width: 500px; */
-        margin: auto;
+      footer {
+        padding: var(--space-xs);
+        background-color: black;
+        box-shadow: 0 0 12px black;
       }
 
-      .heading {
-        text-align: center;
-        padding-bottom: var(--space-s);
-        letter-spacing: calc(var(--font-size-xs));
+      h1 {
+        font-weight: normal;
+        margin: 0;
+        padding: 0 var(--space-xs) var(--space-xs);
+        text-align: right;
       }
 
-      .main-heading {
+      .current-bun {
+        font-size: var(--font-size-xxl);
+        letter-spacing: var(--font-size-xxs);
         display: block;
         text-transform: lowercase;
       }
+      .current-bun::before {
+        content: "\0000a0";
+      }
+      .current-bun::after {
+        content: ".";
+      }
 
-      .sub-heading {
+      .maternity {
         display: block;
         text-transform: uppercase;
-        letter-spacing: var(--font-size-xs);
-        font-size: var(--font-size-s);
+        letter-spacing: var(--font-size-xxs);
+        font-size: var(--font-size-xs);
         font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 400;
-        padding-left: 9em;
+      }
+      .maternity::after {
+        content: "\0000a0";
       }
 
-      .backdrop {
-        /* background-color: white;
-        background-image: url('coming-soon.png');
-        background-size: cover; */
-        /* padding: var(--space-l) var(--space-l); */
-        padding: var(--space-xs) var(--space-l);
-        color: black;
-        /* background: rgb(230, 178, 48); */
-        background: #ffa66f;
+      main {
+        text-align: center;
+        padding: var(--space-l);
+        max-width: 800px;
+        margin: auto;
       }
 
       .social-links {
@@ -147,8 +143,9 @@
         display: inline-block;
       }
 
-      footer {
-        padding: 0 var(--space-xs);
+      .smol {
+        display: block;
+        font-size: var(--font-size-xs);
       }
 
     </style>
@@ -156,40 +153,61 @@
 
   <body>
 
-    <header class="outer-frame">
-      <h1 class="heading">
-        <!-- <img alt="Current Bun. Maternity" src="logo.png" /> -->
-        <span class="main-heading">Current Bun.</span>
-        <span class="sub-heading">Maternity</span>
+    <header>
+      <h1>
+        <span class="current-bun">Current Bun</span>
+        <span class="maternity">Maternity</span>
       </h1>
     </header>
 
-    <div class="backdrop">
-      <main class="inner-frame">
-        <h2>New maternity brand launching Spring/Summer 2021!</h2>
-        <p>
-          Register your email
-          <a href=https://docs.google.com/forms/d/e/1FAIpQLSeV_-2xmOySv9sdu7bPy1ZV9_9AYcW7COquCT-F9ktmAJUEsg/viewform?usp=sf_link">
-            here</a>
-          to receive updates.
-        </p>
+    <main>
+      <p>An exciting new maternity branch launching this Spring/Summer</p>
 
-        <h2>Follow us on social media:</h2>
-        <ul class="social-links">
-          <li class="social-link"><a href="https://www.instagram.com/currentbunmaternity/">{instagram}</a></li>
-          <li class="social-link"><a href="https://www.facebook.com/currentbunmaternity">{facebook}</a></li>
-          <li class="social-link"><a href="https://www.pinterest.co.uk/currentbunmaternity/">{pinterest}</a></li>
-        </ul>
-        <p>@currentbunmaternity</p>
+      <p>
+        It is the brain child of two former colleagues, with over 20 years
+        experience in the Fashion Industry, who are passionate about making
+        pregnant women look and feel great (after all they are literally
+        growing the next generation!). We believe they are massively
+        under-represented on the high-street and this is what we aim to
+        correct.
+      </p>
 
-        <h2>Contact us:</h2>
-        <p>
-          <a href="mailto:currentbunmaternity@gmail.com">
-            currentbunmaternity@gmail.com
-          </a>
-        </p>
-      </main>
-    </div>
+      <p>
+        Our ethos is to be 3 things: fashionable, fun and affordable
+      </p>
+
+      <p>
+        Do you want to be the first to hear about the launch of our collection?
+        Of course you do! Register your email 
+        <a href="https://docs.google.com/forms/d/1tOKWnVy5Ck1T9l5czORM2N5UyetohGhkcGI-6tnjnVg/viewform?gxids=7628&edit_requested=true"
+          >here</a>
+        to receive updates.
+        <span class="smol">
+          (This will re-direct you to Google Forms)
+        </span>
+      </p>
+
+      <p>Follow us on social media:</p>
+      <ul class="social-links">
+        <li class="social-link">
+          <a href="https://www.instagram.com/currentbunmaternity/">{instagram}</a>
+        </li>
+        <li class="social-link">
+          <a href="https://www.facebook.com/currentbunmaternity">{facebook}</a>
+        </li>
+        <li class="social-link">
+          <a href="https://www.pinterest.co.uk/currentbunmaternity/">{pinterest}</a>
+        </li>
+      </ul>
+      <p>@currentbunmaternity</p>
+
+      <p>Or contact us:</p>
+      <p>
+        <a href="mailto:currentbunmaternity@gmail.com">
+          currentbunmaternity@gmail.com
+        </a>
+      </p>
+    </main>
 
     <footer class="outer-frame">
       <p>Copyright &copy; Current Bun Maternity 2021</p>
