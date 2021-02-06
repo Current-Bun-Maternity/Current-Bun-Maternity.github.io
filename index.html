@@ -21,6 +21,12 @@
       /* variables */
 
       :root {
+        --palette-flirt: #a4036f;
+        --palette-blue-munsell: #048ba8;
+        --palette-medium-aquamarine: #16db93;
+        --palette-corn: #efea5a;
+        --palette-sandy-brown: #f29e4c;
+
         --font-step: 4px;
         --font-size-xxs: calc(var(--font-step) * 2);
         --font-size-xs: calc(var(--font-step) * 3);
@@ -70,7 +76,11 @@
         letter-spacing: calc(var(--font-size-xs) / 4);
         text-align: center;
 
-        background-image: linear-gradient(-155deg,#f29e4c,#a4036f,#048ba8);
+        background-image:
+          linear-gradient(-165deg,
+            var(--palette-sandy-brown),
+            var(--palette-flirt),
+            var(--palette-blue-munsell));
       }
 
       a, a:active {
