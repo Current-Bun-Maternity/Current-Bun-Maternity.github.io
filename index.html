@@ -82,7 +82,7 @@
       }
 
 
-      /* frames */
+      /* content */
 
       header {
         background: black;
@@ -138,6 +138,12 @@
         margin: auto;
       }
 
+      .goal-list {
+        list-style-type: none;
+        padding: 0;
+        letter-spacing: calc(var(--font-size-xxs) / 2);
+      }
+
       .social-links {
         list-style-type: none;
         padding: 0;
@@ -145,6 +151,11 @@
 
       .social-link {
         display: inline-block;
+      }
+
+      .smol {
+        display: block;
+        font-size: var(--font-size-xs);
       }
 
     </style>
@@ -172,19 +183,29 @@
       <p>
         With over 20 years experience in the Fashion Industry, and having been
         personally affected by the lack of fashion choices when pregnant; we
-        are driven more than ever to address this neglect.
+        have decided to put our knowledge to good use and address this issue.
       </p>
 
       <p>
-        We are Current Bun Maternity. An exciting new maternity brand launching
-        this Summer. Our ethos is to be 3 things: fashionable, fun and
-        affordable
+        We are Current Bun. An exciting new maternity brand, aimed at fashion
+        conscious women, launching this Summer. Our goal is to be 3 things:
       </p>
+      <ul class="goal-list">
+        <li>fashionable</li>
+        <li>fun</li>
+        <li>affordable</li>
+      </ul>
 
       <p>
-        To receive updates about our launch, register your email via
-        <a href="https://docs.google.com/forms/d/1tOKWnVy5Ck1T9l5czORM2N5UyetohGhkcGI-6tnjnVg/viewform?gxids=7628&edit_requested=true"
-          >this Google form .</a>
+        To register your interest in our first collection,<br/>
+        please enter your email address
+        <a
+          href="https://docs.google.com/forms/d/1tOKWnVy5Ck1T9l5czORM2N5UyetohGhkcGI-6tnjnVg/viewform?gxids=7628&edit_requested=true"
+          rel="noreferrer noopener"
+        >here.</a>
+        <span class="smol">
+          (This will re-direct you to Google Forms)
+        </span>
       </p>
 
       <p>Follow us on social media: @currentbunmaternity</p>
@@ -200,12 +221,6 @@
         </li>
       </ul>
 
-      <p>
-        Or contact us:
-        <a href="mailto:currentbunmaternity@gmail.com">
-          currentbunmaternity@gmail.com
-        </a>
-      </p>
     </main>
 
     <footer class="outer-frame">
