@@ -149,8 +149,16 @@
         padding: 0;
       }
 
+      .social-icon {
+        width: var(--font-size-l);
+        height: var(--font-size-l);
+      }
+
       .social-link {
         display: inline-block;
+        margin: 0;
+        padding: calc(var(--space-xs) / 2);
+        text-decoration: none;
       }
 
       .smol {
@@ -208,18 +216,19 @@
         </span>
       </p>
 
-      <p>Follow us on social media: @currentbunmaternity</p>
-      <ul class="social-links">
-        <li class="social-link">
-          <a href="https://www.instagram.com/currentbunmaternity/">{instagram}</a>
-        </li>
-        <li class="social-link">
-          <a href="https://www.facebook.com/currentbunmaternity">{facebook}</a>
-        </li>
-        <li class="social-link">
-          <a href="https://www.pinterest.co.uk/currentbunmaternity/">{pinterest}</a>
-        </li>
-      </ul>
+      <p>
+        Follow us on social media:<br/>
+        @currentbunmaternity<br/>
+        <a class="social-link" href="https://www.instagram.com/currentbunmaternity/">
+          <img class="social-icon" src="instagram-badge.png" alt="Instagram" />
+        </a>
+        <a class="social-link" href="https://www.facebook.com/currentbunmaternity">
+          <img class="social-icon" src="facebook-badge.png" alt="Facebook" />
+        </a>
+        <a class="social-link" href="https://www.pinterest.co.uk/currentbunmaternity/">
+          <img class="social-icon" src="pinterest-badge.svg" alt="Pinterest" />
+        </a>
+      </p>
 
     </main>
 
