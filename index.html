@@ -68,7 +68,8 @@
         font-size: var(--font-size-s);
         text-align: center;
 
-        color: white; background: black;
+        color: white;
+        background: black;
       }
 
       a, a:active {
@@ -79,8 +80,6 @@
       /* content */
 
       header {
-        background: black;
-        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
         display: flex;
         justify-content: space-around;
         position: sticky;
@@ -133,7 +132,7 @@
 
       main {
         text-align: center;
-        padding: var(--space-l);
+        padding: 0 var(--space-l);
         max-width: 800px;
         margin: auto;
       }
@@ -164,6 +163,11 @@
         display: inline-block;
       }
 
+      .due-soon {
+        font-size: var(--font-size-l);
+        font-style: italic;
+      }
+
     </style>
   </head>
 
@@ -178,8 +182,8 @@
 
     <main>
 
-      <p>
-        ...due soon...
+      <p class="due-soon">
+        &hellip;due soon&hellip;
       </p>
 
       <p>
@@ -189,14 +193,12 @@
       </p>
 
       <p>
-        To be added to our <span class="no-break">mailing list</span> and be
-        the first to find out about our new collection, please
-        <span class="no-break">enter your email address
-          <a
-            href="https://docs.google.com/forms/d/1tOKWnVy5Ck1T9l5czORM2N5UyetohGhkcGI-6tnjnVg/viewform?gxids=7628&edit_requested=true"
-            rel="noreferrer noopener"
-          >here</a>.
-        </span>
+        To be added to our mailing list and be the first to find out about our
+        new collection, please enter your email address
+        <a
+          href="https://docs.google.com/forms/d/1tOKWnVy5Ck1T9l5czORM2N5UyetohGhkcGI-6tnjnVg/viewform?gxids=7628&edit_requested=true"
+          rel="noreferrer noopener"
+        >here</a>.
         <span class="smol">
           (This will re-direct you to Google Forms)
         </span>
