@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>current bun. maternity</title>
-    <meta name="description" content="Current Bun Maternity - New maternity brand launching Sprint/Summer 2021!" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Current Bun Maternity - New maternity brand launching Summer 2021!" />
     <meta name="author" content="Current Bun Maternity Ltd" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,13 +22,6 @@
       /* variables */
 
       :root {
-        /* https://coolors.co/a4036f-048ba8-16db93-efea5a-f29e4c */
-        --palette-flirt: #a4036f;
-        --palette-blue-munsell: #048ba8;
-        --palette-medium-aquamarine: #16db93;
-        --palette-corn: #efea5a;
-        --palette-sandy-brown: #f29e4c;
-
         --font-step: 4px;
         --font-size-xxs: calc(var(--font-step) * 2);
         --font-size-xs: calc(var(--font-step) * 3);
@@ -128,7 +122,13 @@
         font-weight: 400;
       }
       .maternity::after {
+        font-size: var(--font-size-xxl);
         content: "\0000a0";
+        line-height: 0px;
+        height: 0px;
+        max-height: 0px;
+        overflow: hidden;
+        display: inline-block;
       }
 
       main {
